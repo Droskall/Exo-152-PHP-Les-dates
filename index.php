@@ -1,13 +1,16 @@
 <?php
 
 // Premiere ligne
-echo date("l")."<br><br>";
+$date = getdate();
+echo $date["weekday"] . "<br>";
 
-// Deuxieme ligne
-echo date("Y.d.m", 1539302400)."<br><br>";
+// Deuxieme Ligne
+$date2 = strtotime("2018/12/10");
+echo date("Y.m.d", $date2) . "<br>";
 
-// Troisiéme ligne
-echo date("H:i:s", 1546342507)."<br><br>";
+// Troisieme Ligne
+$date3 = mktime(11, 35, 07, 0, 0, 0);
+echo date("H.i.s", $date3) . "<br>";
 
 
 
